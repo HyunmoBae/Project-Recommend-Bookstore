@@ -37,17 +37,3 @@ $ aws eks update-kubeconfig --name bookstore-cluster
 ```bash
 $ doskey k=kubectl $*
 ```
-
-## kubectl auto-script
-
-# Bash 자동완성 스크립트 :
-
-bashCopykubectl completion bash > ~/.kube/completion.bash.inc
-bashCopyecho 'source ~/.kube/completion.bash.inc' >> ~/.bashrc
-bashCopysource ~/.bashrc
-
-# (선택사항) kubectl에 대한 별칭 설정 및 자동완성 적용:
-
-bashCopyecho 'alias k=kubectl' >> ~/.bashrc
-echo 'complete -o default -F \_\_start_kubectl k' >> ~/.bashrc
-source ~/.bashrc
